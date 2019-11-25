@@ -10,8 +10,7 @@ public class Stewardess extends Person {
 
     @Override
     public String toString() {
-        return "Stewardess{" +
-                "businessClass='" + businessClass + '\'' +
-                '}';
+        return "Stewardess" +
+                "(businessClass)='" + businessClass + '\'';
     }
 }

@@ -10,8 +10,7 @@ public class Pilot extends Person {
 
     @Override
     public String toString() {
-        return "Pilot{" +
-                "rank='" + rank + '\'' +
-                '}';
+        return "Pilot" +
+                "(rank)='" + rank + '\'';
     }
 }

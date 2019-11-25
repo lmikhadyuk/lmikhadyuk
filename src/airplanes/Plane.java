@@ -1,20 +1,18 @@
 package airplanes;
 
-import person.Person;
-
-import java.util.List;
+import details.Engine;
 
 public class Plane {
-    private String name;
-    private String model;
-    private int year;
-    private List<Person> crew;
+    protected String name;
+    protected String model;
+    protected int year;
+    protected Engine engine;
 
-    public Plane(String name, String model, int year, List<Person> crew) {
+    public Plane(String name, String model, int year, Engine engine) {
         this.name = name;
         this.model = model;
         this.year = year;
-        this.crew = crew;
+        this.engine = engine;
     }
 
     public String getName() {
@@ -41,12 +39,12 @@ public class Plane {
         this.year = year;
     }
 
-    public List<Person> getCrew() {
-        return crew;
+    public Engine getEngine() {
+        return engine;
     }
 
-    public void setCrew(List<Person> crew) {
-        this.crew = crew;
+    public void setEngine(Engine engine) {
+        this.engine = engine;
     }
 
     @Override
@@ -55,7 +53,6 @@ public class Plane {
                 "name='" + name + '\'' +
                 ", model='" + model + '\'' +
                 ", year=" + year +
-                ", crew=" + crew +
                 '}';
     }
 }

@@ -1,11 +1,19 @@
 package airplanes;
 
-import person.Person;
+import details.Engine;
 
-import java.util.List;
+public class FighterPlane extends Plane implements Capabilities {
+    public FighterPlane(String name, String model, int year, Engine engine) {
+        super(name, model, year, engine);
+    }
 
-public class FighterPlane extends Plane {
-    public FighterPlane(String name, String model, int year, List<Person> crew) {
-        super(name, model, year, crew);
+    @Override
+    public void speed() {
+        System.out.println("200 km/hour");
+    }
+
+    @Override
+    public String getInfoPlane() {
+        return "name= " + name + ", model= " + model + ", year= " + year;
     }
 }
