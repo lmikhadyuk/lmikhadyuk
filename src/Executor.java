@@ -34,6 +34,9 @@ public class Executor {
         System.out.println(charterPlane1.toString());
         System.out.println("Max Speed for Charter= " + charterPlane1.getEngine().showMaxSpeed());
         System.out.println("Max Speed for Fighter= " + fighterPlane1.getEngine().showMaxSpeed());
+        System.out.println("Max Speed for Charter with cargo= " + charterPlane1.getEngine().showMaxSpeed(3000));
+        System.out.println("Max Speed for Fighter with cargo= " + fighterPlane1.getEngine().showMaxSpeed(50));
+        System.out.println("Voice for charter plane= " + charterPlane1.getVoice());
 
 
 

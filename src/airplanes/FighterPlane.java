@@ -14,6 +14,6 @@ public class FighterPlane extends Plane implements Capabilities {
 
     @Override
     public String getInfoPlane() {
-        return "name= " + name + ", model= " + model + ", year= " + year;
+        return "name= " + getName() + ", model= " + getModel() + ", year= " + getYear();
     }
 }

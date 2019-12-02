@@ -3,6 +3,7 @@ package details;
 public abstract class Engine {
     private int power;
     public abstract int showMaxSpeed();
+    public abstract int showMaxSpeed(int weight);
 
     public Engine(int power) {
         this.power = power;

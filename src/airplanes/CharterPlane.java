@@ -1,5 +1,6 @@
 package airplanes;
 
+
 import details.Engine;
 
 public class CharterPlane extends Plane implements Capabilities {
@@ -12,9 +13,9 @@ public class CharterPlane extends Plane implements Capabilities {
 
     @Override
     public String toString() {
-        return "CharterPlane( "+  "name='" + name + '\'' +
-                ", model='" + model + '\'' +
-                ", year=" + year + ", " +
+        return "CharterPlane( "+  "name='" + getName() + '\'' +
+                ", model='" + getModel() + '\'' +
+                ", year=" + getYear() + ", " +
                 "type='" + type + '\'' +
                 ')';
     }
@@ -27,6 +28,6 @@ public class CharterPlane extends Plane implements Capabilities {
 
     @Override
     public String getInfoPlane() {
-        return "model= " + model + ", year= " + year ;
+        return "model= " + getModel() + ", year= " + getYear() ;
     }
 }
