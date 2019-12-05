@@ -7,9 +7,9 @@ public class Plane {
     private String model;
     private int year;
     private Engine engine;
-    private static final int MIN_WEIGHT = 0;
-    private static final int MAX_WEIGHT = 90;
-    private final String voice;
+    public static final int MIN_WEIGHT = 0;
+    public static final int MAX_WEIGHT = 90;
+    public final String voice;
 
     public Plane(String name, String model, int year, Engine engine) {
         this.name = name;
