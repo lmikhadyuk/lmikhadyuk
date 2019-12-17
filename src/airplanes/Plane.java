@@ -1,6 +1,13 @@
 package airplanes;
 
 import details.Engine;
+import exceptions.CrewIsEmptyException;
+import person.Person;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Plane {
     private String name;
@@ -10,6 +17,33 @@ public class Plane {
     public static final int MIN_WEIGHT = 0;
     public static final int MAX_WEIGHT = 90;
     public final String voice;
+    private List<Person> crew = new ArrayList<Person>();
+    private Map<Integer,Person> sites = new HashMap<>();
+
+    public void addPerson(Person person1) {
+        crew.add(person1);
+    }
+
+    public List<Person> getListOfPersons() throws CrewIsEmptyException {
+        if (crew != null && !crew.isEmpty()) {
+
+            return crew;
+        }
+        throw new CrewIsEmptyException();
+    }
+
+    public void addPerson(Integer seat,Person person1){
+        sites.put(seat, person1);
+
+    }
+    public Map<Integer,Person> getMapOfPersons() {
+        if ( sites!= null && !sites.isEmpty()) {
+
+            return sites;
+        } else {
+            return null;
+        }
+    }
 
     public Plane(String name, String model, int year, Engine engine) {
         this.name = name;
@@ -78,7 +112,6 @@ public class Plane {
     public final String getVoice() {
         return voice;
     }
-
 
 
     @Override
