@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Person>
+    <Pilot>
+        <FirstName>Ivan</FirstName>
+        <LastName>Ivanov</LastName>
+        <Rank>1</Rank>
+    </Pilot>
+    <Stewardess>
+        <FirstName>Ivan</FirstName>
+        <LastName>Ivanov</LastName>
+        <BusinessClass>business</BusinessClass>
+    </Stewardess>
+</Person>

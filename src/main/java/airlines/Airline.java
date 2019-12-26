@@ -1,7 +1,6 @@
 package airlines;
 
 
-import airplanes.Capabilities;
 import airplanes.Plane;
 
 import java.util.HashSet;

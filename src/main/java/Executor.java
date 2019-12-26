@@ -11,8 +11,6 @@ import person.Person;
 import person.Pilot;
 import person.Stewardess;
 
-import java.util.*;
-
 
 public class Executor {
 
