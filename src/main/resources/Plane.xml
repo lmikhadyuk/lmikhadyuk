@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<Plane>
+    <CharterPlane>
+        <Name>SukhoiSuperjet</Name>
+        <Model>100</Model>
+        <Year>2018</Year>
+        <Type>Shattl</Type>
+        <Engine>engine1</Engine>
+    </CharterPlane>
+    <FighterPlane>
+        <Name>Il-26</Name>
+        <Model>200</Model>
+        <Year>2019</Year>
+        <Engine>engine2</Engine>
+    </FighterPlane>
+    <CommercialPlane></CommercialPlane>
+</Plane>

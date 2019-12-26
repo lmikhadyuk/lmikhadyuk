@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Engine>
+    <TurboEngine>
+        <Power>3000</Power>
+    </TurboEngine>
+    <ReactiveEngine>
+        <Power>5000</Power>
+    </ReactiveEngine>
+</Engine>
