@@ -7,13 +7,14 @@ import details.Engine;
 import details.ReactiveEngine;
 import details.TurboEngine;
 import exceptions.CrewIsEmptyException;
+import org.apache.log4j.Logger;
 import person.Person;
 import person.Pilot;
 import person.Stewardess;
 
 
 public class Executor {
-
+    private static final Logger LOGGER = Logger.getLogger(Executor.class);
     public static void main(String[] args) {
         Pilot pilot1 = new Pilot("Ivan", "Ivanov", "1");
         Pilot pilot2 = new Pilot("Vova", "Ivanov", "3");
@@ -57,7 +58,7 @@ public class Executor {
                 System.out.println(person.getFirstName() + " " + person.getLastName());
             }
         } catch (CrewIsEmptyException e) {
-            System.out.println("No crew");
+            LOGGER.error("No crew");
         }
 
         airline1.addPlane(charterPlane1);

@@ -2,12 +2,15 @@ package airplanes;
 
 import details.Engine;
 import exceptions.CrewIsEmptyException;
+import org.apache.log4j.Logger;
 import person.Person;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+
 
 public class Plane {
     private String name;
@@ -19,8 +22,10 @@ public class Plane {
     public final String voice;
     private List<Person> crew = new ArrayList<Person>();
     private Map<Integer,Person> sites = new HashMap<>();
+    private static final Logger LOGGER = Logger.getLogger(Plane.class);
 
     public void addPerson(Person person1) {
+        LOGGER.info("First name:"+ person1.getFirstName()+" Last name:"+person1.getLastName());
         crew.add(person1);
     }
 
