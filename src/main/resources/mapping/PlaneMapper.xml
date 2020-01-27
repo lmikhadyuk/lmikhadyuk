@@ -1,0 +1,14 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.PlaneMapper">
+    <resultMap id="PlaneModel" type="model.PlaneModel">
+        <association property="type" column="plane_type_idplane_type" javaType="model.PlaneTypeModel"
+                     select="getPlaneTypeById"/>
+    </resultMap>
+    <select id="getPlaneById" parameterType="java.lang.Long" resultMap="PlaneModel">
+        select name, model, year, plane_type_idplane_type from plane where idplane = #{id}
+    </select>
+    <select id="getPlaneTypeById" parameterType="java.lang.Long" resultType="model.PlaneTypeModel">
+        select type from plane_type where idplane_type = #{id}
+    </select>
+</mapper>

@@ -1,0 +1,14 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.EngineMapper">
+    <resultMap id="EngineModel" type="model.EngineModel">
+        <association property="type" column="engine_type_idengine_type" javaType="model.EngineTypeModel"
+                     select="getEngineTypeById"/>
+    </resultMap>
+    <select id="getEngineById" parameterType="java.lang.Long" resultMap="EngineModel">
+        select power, engine_type_idengine_type from engine where idengine = #{id}
+    </select>
+    <select id="getEngineTypeById" parameterType="java.lang.Long" resultType="model.EngineTypeModel">
+        select type from engine_type where idengine_type = #{id}
+    </select>
+</mapper>

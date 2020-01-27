@@ -1,0 +1,14 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.PersonMapper">
+    <resultMap id="PersonModel" type="model.PersonModel">
+    <association property="type" column="person_type_idperson_type" javaType="model.PersonTypeModel"
+                 select="getPersonTypeById"/>
+    </resultMap>
+    <select id="getPersonById" parameterType="java.lang.Long" resultMap="PersonModel">
+        select firstname, lastname, person_type_idperson_type from person where idperson = #{id}
+    </select>
+    <select id="getPersonTypeById" parameterType="java.lang.Long" resultType="model.PersonTypeModel">
+        select type from person_type where idperson_type = #{id}
+    </select>
+</mapper>
