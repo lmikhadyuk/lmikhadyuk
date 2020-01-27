@@ -1,0 +1,8 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.AirlineMapper">
+    <resultMap id="AirlineModel" type="model.AirlineModel"/>
+    <select id="getAirlineById" parameterType="java.lang.Long" resultType="model.AirlineModel">
+        select name from airline where idairline = #{id}
+    </select>
+</mapper>

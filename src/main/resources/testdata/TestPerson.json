@@ -1,0 +1,15 @@
+[
+  {
+    "firstname": "Ivan",
+    "lastname": "Ivanov",
+    "type": {
+      "type": "pilot"
+    }
+  },
+  {"firstname": "Nikita",
+    "lastname": "Sidorevich",
+    "type": {
+      "type": "pilot"
+    }
+}
+]
